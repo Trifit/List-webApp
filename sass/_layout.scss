@@ -1,0 +1,62 @@
+// Classes and ids
+
+#sortable1, #sortable2{
+	width: 45%;
+	margin: 10px 10px;
+	padding: 10px 0;
+    display: inline-block;
+    text-align: center;
+    border:1px solid $fifty-grey;
+    vertical-align: top;
+
+}
+
+#sortable1{
+	li{
+		background: $ten-grey;	
+		border: 2px solid $fifty-grey;	
+	}
+}
+
+#sortable2{
+	color: $fifty-grey;
+	li{
+		background: $thirty-grey;
+		border: 2px solid $fifty-grey;	
+		box-shadow: inset 0 0 5px $fifty-grey;
+
+	}	
+}
+
+#checkIt, #tryIt, #resetIt{
+	display: inline-block;
+	line-height: 2em;
+	width: 100px;
+	margin: 20px 10px;
+	cursor: pointer;
+	color: $ten-grey;
+	opacity: 0.7;
+}
+
+#checkIt, #tryIt, #resetIt{
+	background: $deep-cerulean;	
+}
+
+#checkIt:hover, #tryIt:hover, #resetIt:hover{
+	opacity: 1;
+	color: $white;
+	transition: all .25s ease;
+}
+
+#dialog{
+    display:none;
+    z-index: 9999;
+    position: relative;
+    background: $fifty-grey;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 40px;
+    .ui-dialog-titlebar-close{
+  		display: none
+	}
+}

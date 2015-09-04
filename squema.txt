@@ -1,0 +1,4 @@
+- 10 items
+- drag items to another area
+- in place? check button
+- wich ones are correct

@@ -1,0 +1,171 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, d:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/_base.scss */
+html {
+  background: #fff;
+}
+
+/* line 8, ../sass/_base.scss */
+body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* line 13, ../sass/_base.scss */
+section {
+  background: #ccc;
+  text-align: center;
+  padding: 20px 0;
+}
+/* line 18, ../sass/_base.scss */
+section ul li {
+  display: inline-block;
+  margin: 0 5px 5px 5px;
+  font-size: 1em;
+  width: 115px;
+  height: 175px;
+  vertical-align: top;
+}
+
+/* line 3, ../sass/_layout.scss */
+#sortable1, #sortable2 {
+  width: 45%;
+  margin: 10px 10px;
+  padding: 10px 0;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #959595;
+  vertical-align: top;
+}
+
+/* line 15, ../sass/_layout.scss */
+#sortable1 li {
+  background: #ebebeb;
+  border: 2px solid #959595;
+}
+
+/* line 21, ../sass/_layout.scss */
+#sortable2 {
+  color: #959595;
+}
+/* line 23, ../sass/_layout.scss */
+#sortable2 li {
+  background: #c2c2c2;
+  border: 2px solid #959595;
+  box-shadow: inset 0 0 5px #959595;
+}
+
+/* line 31, ../sass/_layout.scss */
+#checkIt, #tryIt, #resetIt {
+  display: inline-block;
+  line-height: 2em;
+  width: 100px;
+  margin: 20px 10px;
+  cursor: pointer;
+  color: #ebebeb;
+  opacity: 0.7;
+}
+
+/* line 41, ../sass/_layout.scss */
+#checkIt, #tryIt, #resetIt {
+  background: #0077b3;
+}
+
+/* line 45, ../sass/_layout.scss */
+#checkIt:hover, #tryIt:hover, #resetIt:hover {
+  opacity: 1;
+  color: #fff;
+  transition: all .25s ease;
+}
+
+/* line 51, ../sass/_layout.scss */
+#dialog {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  background: #959595;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 40px;
+}
+/* line 59, ../sass/_layout.scss */
+#dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+
+/* line 1, ../sass/_state.scss */
+.is-correct {
+  border: 2px solid #b0eb00 !important;
+}
+
+/* line 5, ../sass/_state.scss */
+.is-notCorrect {
+  border: 2px solid #b30015 !important;
+}

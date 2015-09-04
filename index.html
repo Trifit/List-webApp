@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+
+        <!-- META DATA -->
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!--[if IE]>
+            <meta http-equiv="cleartype" content="on" />
+        <![endif]-->
+
+        
+        <title>List webapp</title>
+
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" media="screen" type="text/css" href="styles/screen.css" />
+        <link rel="stylesheet" media="print" type="text/css" href="styles/print.css">
+        <!--[if gte IE 8]>
+            <link rel="stylesheet" media="screen" type="text/css" href="styles/ie.css" />
+        <![endif]-->
+
+    </head>
+    <body>
+        <section>
+            <h1>Sort this movies from oldest to newest:</h1>
+            <ul id="sortable1">
+                <li><img src="images/1980 - StarWarsEpisodeVTheEmpireStrikesBack.jpg" alt="Empire Strikes Back"/></li>
+                <li><img src="images/1981 - Dragonslayer.jpg" alt=""/></li>
+                <li><img src="images/1982 - theDarkCristal.jpg" alt=""/></li>
+                <li><img src="images/1983 - Krull.jpg" alt=""/></li>
+                <li><img src="images/1984 - NeverEndingStory.jpg" alt=""/></li>
+                <li><img src="images/1985 - Legend.jpg" alt=""/></li>
+                <li><img src="images/1986 - Labyrinth.jpg" alt=""/></li>
+                <li><img src="images/1987 - thePrincessBride.jpg" alt=""/></li>
+                <li><img src="images/1988 - Willow.jpg" alt=""/></li>
+                <li><img src="images/1989 - Ghostbusters 2.jpg" alt=""/></li>
+            </ul>
+
+            <ul id="sortable2">
+                <li>1980 (Star Wars Episode V: The Empire Strikes Back)</li>
+                <li>1981 (Dragonslayer)</li>
+                <li>1982 (the Dark Cristal)</li>
+                <li>1983 (Krull)</li>
+                <li>1984 (Never Ending Story)</li>
+                <li>1985 (Legend)</li>
+                <li>1986 (Labyrinth)</li>
+                <li>1987 (the Princess Bride)</li>
+                <li>1988 (Willow)</li>
+                <li>1989 (Ghostbusters 2)</li>
+            </ul>
+            <div class="hlist">
+                <div id="checkIt">Check it!</div>
+                <div id="tryIt">Try it again!</div>
+                
+            </div>
+            
+            <div id="dialog">
+                <p>You made it!</p>
+                <p>You have tried <strong id="tries">0</strong> times </p>
+                <div id="resetIt">Reset it!</div> <!-- Restards the counter and the whole game -->
+            </div>
+        </section>
+        
+        <!-- Javascript -->
+        <script src="javascripts/jquery.min.js"></script>
+        <script src="javascripts/jquery-ui.js"></script>
+        <script src="javascripts/functions.js"></script>
+    </body>
+</html>

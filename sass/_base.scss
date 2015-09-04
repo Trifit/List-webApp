@@ -1,0 +1,27 @@
+// Default styles (no classes, no ids)
+
+
+html{
+	background: #fff;
+}
+
+body{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+section{
+	background: #ccc;
+    text-align: center;
+    padding: 20px 0;
+	ul{
+		li{
+			display: inline-block;
+			margin: 0 5px 5px 5px;
+	    	font-size: 1em;	
+	    	width: 115px;
+	    	height: 175px;    		    	
+	    	vertical-align: top;	    	
+		}
+	}
+}

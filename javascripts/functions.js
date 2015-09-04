@@ -254,7 +254,8 @@ $(function() {
 
 		return this;
 	};
- 	/**
+ 	
+    /**
      * Enables the component
      * Performs any event binding to handlers
      *
@@ -270,6 +271,26 @@ $(function() {
         this.$checkIt.on('click', this.handleCheckIt);
         this.$tryIt.on('click', this.handleTryIt);
         this.$resetIt.on('click', this.handleResetIt);
+
+        return this;
+    };
+
+     /**
+     * Disables the component
+     * Tears down any event binding to handlers
+     *
+     * @method disable
+     * @public
+     * @chainable
+     */
+    Assessment.prototype.disable = function() {
+        if (this.isEnabled) {
+            return this;
+        }
+
+        this.$checkIt.off('click', this.handleCheckIt);
+        this.$tryIt.off('click', this.handleTryIt);
+        this.$resetIt.off('click', this.handleResetIt);
 
         return this;
     };
@@ -302,24 +323,27 @@ $(function() {
 			var slotNumber = $(this).attr('id');
 		  	var cardNumber = ui.draggable.attr( 'id');
 		  	console.log('card number: '+ cardNumber + ' slotNumber: ' + slotNumber);
-		  	ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } ); //snaps into place
+		  	
+            ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } ); //snaps into place
 		 				
-			$(this).droppable( 'disable' );
-			
-			if ( slotNumber === cardNumber ) {
+            
+            if ( slotNumber === cardNumber ) {
+                $(this).droppable( 'disable' );
 				ui.draggable.data('correct', 'true');				
 			    context.correctCards++;
 			    console.log(context.correctCards);		 		
 			}
 
 			if ( context.correctCards == 10 ) {
-		  		context.$dialog.dialog({
-		  			modal: true,
-		  			closeOnEscape: false,
-   					open: function(event, ui) { $(".ui-dialog-titlebar-close", ui.dialog | ui).hide() 
-   				}
-   			});
-
+                context.correct();
+                context.$dialog.dialog({
+                    modal: true,
+                    closeOnEscape: false,
+                    open: function(event, ui) { 
+                        $(".ui-dialog-titlebar-close", ui.dialog | ui).hide() 
+                    }
+                });
+                
 			}	
 		};
 		
@@ -415,6 +439,22 @@ $(function() {
 		return this;
 	};
 
+    Assessment.prototype.correct = function (){
+        var context = this.sortable1Item;
+
+        this.$list1.children('li').each(function (i){
+            if($(context + ':eq(' + i + ')').data('correct') === 'true'){               
+                $(context + ':eq(' + i + ')').addClass( 'is-correct' ); // add class to show correct
+                $(context + ':eq(' + i + ')').removeClass('is-notCorrect'); // remove class to show incorrect               
+                $(context + ':eq(' + i + ')').draggable('disable'); // dissable the correct items 
+            }else{
+                $(context + ':eq(' + i + ')').addClass('is-notCorrect'); // add class to show incorrect
+            }
+        });
+
+        return this;
+    };
+
 	//////////////////////////////////////////////////////////
     // EVENT HANDLERS
     //////////////////////////////////////////////////////////
@@ -426,17 +466,9 @@ $(function() {
      * @param {Object} event The event object
      */
     Assessment.prototype.handleCheckClick = function (e){
-    	var context = this.sortable1Item;
+    	
 
-    	this.$list1.children('li').each(function (i){
-			if($(context + ':eq(' + i + ')').data('correct') === 'true'){	    		
-	    		$(context + ':eq(' + i + ')').addClass( 'is-correct' ); // add class to show correct
-	    		$(context + ':eq(' + i + ')').removeClass('is-notCorrect'); // remove class to show incorrect	    		
-	    		$(context + ':eq(' + i + ')').draggable('disable'); // dissable the correct items 
-	    	}else{
-	    		$(context + ':eq(' + i + ')').addClass('is-notCorrect'); // add class to show incorrect
-	    	}
-    	});		
+    	this.correct();    	
 
 		this.totalTries++;
 		this.counter();	   
